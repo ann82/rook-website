@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOK — About</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ============================================================
+     DEV PREVIEW ONLY — delete this button (and its CSS/JS below)
+     before deploying to the live site
+     ============================================================ -->
+<button id="dev-preview-toggle" class="active" onclick="toggleDevPreview()" title="Switch preview width">💻 Desktop Preview</button>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="ROOK Home">
+    <img src="images/nav-logo.png" alt="ROOK — Clean · Renew · Build" style="height:44px;width:auto;display:block;">
+  </a>
+
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">About<span class="nav-dropdown-caret" aria-hidden="true"></span></button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="#about-content">About</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="index.html#services" class="nav-dropdown-trigger">Services<span class="nav-dropdown-caret" aria-hidden="true"></span></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="index.html#properties">Properties We Serve</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Why Rook<span class="nav-dropdown-caret" aria-hidden="true"></span></button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="index.html#about">Our Approach</a></li>
+          <li><a href="index.html#testimonials">Client Voices</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a href="index.html#estimate" class="nav-cta">Contact Us</a>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+  <ul>
+    <li><a href="#about-content" onclick="closeMobileNav()">About</a></li>
+    <li><a href="#team" onclick="closeMobileNav()">Team</a></li>
+    <li><a href="index.html#services" onclick="closeMobileNav()">Services</a></li>
+    <li><a href="projects.html" onclick="closeMobileNav()">Project</a></li>
+    <li><a href="index.html#properties" onclick="closeMobileNav()">Properties We Serve</a></li>
+    <li><a href="index.html#about" onclick="closeMobileNav()">Our Approach</a></li>
+    <li><a href="index.html#testimonials" onclick="closeMobileNav()">Client Voices</a></li>
+  </ul>
+  <a href="index.html#estimate" class="mobile-cta" onclick="closeMobileNav()">Contact Us</a>
+</nav>
+
+<!-- ============================================================
+     PAGE HEADER
+     ============================================================ -->
+<section class="projects-hero">
+  <div class="section-label">Our Team</div>
+  <h1 class="section-title">About Rook</h1>
+  <p class="projects-hero-sub">The leadership, janitors, and contractors behind every property we serve — photos and bios coming soon.</p>
+</section>
+
+<!-- ============================================================
+     ABOUT / WHO WE ARE
+     ============================================================ -->
+<section class="team-section" id="about-content">
+  <div class="team-section-head">
+    <div class="section-label">Who We Are</div>
+    <h2 class="section-title">Built by People Who Show Up.</h2>
+    <p class="team-section-copy">Rook is a Bay Area facility services company built around accountability — one partner handling cleaning, renewal, and light construction across your properties, backed by a team that treats every building like their own.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEADERSHIP
+     ============================================================ -->
+<section class="team-section" id="team">
+  <div class="team-section-head">
+    <div class="section-label">Leadership</div>
+    <h2 class="section-title">Meet the Team</h2>
+    <p class="team-section-copy">The people setting the standard for how Rook shows up on every property.</p>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-photo">Add photo</div>
+      <div class="team-name">Full Name</div>
+      <div class="team-role">Title / Role</div>
+      <p class="team-bio">Short bio goes here — background, focus area, and what they lead at Rook.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">Add photo</div>
+      <div class="team-name">Full Name</div>
+      <div class="team-role">Title / Role</div>
+      <p class="team-bio">Short bio goes here — background, focus area, and what they lead at Rook.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">Add photo</div>
+      <div class="team-name">Full Name</div>
+      <div class="team-role">Title / Role</div>
+      <p class="team-bio">Short bio goes here — background, focus area, and what they lead at Rook.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FIELD TEAM — JANITORS & CONTRACTORS
+     ============================================================ -->
+<section class="team-section">
+  <div class="team-section-head">
+    <div class="section-label">Field Team</div>
+    <h2 class="section-title">Janitors &amp; Contractors</h2>
+    <p class="team-section-copy">The crews and trusted contractors who do the hands-on work at every property we manage.</p>
+  </div>
+  <div class="team-grid team-grid--crew">
+    <div class="team-card">
+      <div class="team-photo">Add photo</div>
+      <div class="team-name">Full Name</div>
+      <div class="team-role">Role / Company</div>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">Add photo</div>
+      <div class="team-name">Full Name</div>
+      <div class="team-role">Role / Company</div>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">Add photo</div>
+      <div class="team-name">Full Name</div>
+      <div class="team-role">Role / Company</div>
+    </div>
+    <div class="team-card">
+      <div class="team-photo">Add photo</div>
+      <div class="team-name">Full Name</div>
+      <div class="team-role">Role / Company</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-brand-row">
+        <img class="footer-logo-full" src="images/footer-logo-full.png" alt="ROOK — Clean, Renew, Build">
+        <p class="footer-desc">Facility services that keep your properties clean, safe, and performing. One partner. All handled.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">© 2026 Rook Facility Services. All rights reserved.</div>
+      <div class="footer-badge">callrook.com</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+  <script src="js/main.js"></script>
+</body>
+</html>

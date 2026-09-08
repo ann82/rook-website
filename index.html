@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROOK</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ============================================================
+     DEV PREVIEW ONLY — delete this button (and its CSS/JS below)
+     before deploying to the live site
+     ============================================================ -->
+<button id="dev-preview-toggle" class="active" onclick="toggleDevPreview()" title="Switch preview width">💻 Desktop Preview</button>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="ROOK Home">
+    <img src="images/nav-logo.png" alt="ROOK — Clean · Renew · Build" style="height:44px;width:auto;display:block;">
+  </a>
+
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">About<span class="nav-dropdown-caret" aria-hidden="true"></span></button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="about.html#about-content">About</a></li>
+          <li><a href="about.html#team">Team</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-trigger">Services<span class="nav-dropdown-caret" aria-hidden="true"></span></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="#properties">Properties We Serve</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Why Rook<span class="nav-dropdown-caret" aria-hidden="true"></span></button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="#about">Our Approach</a></li>
+          <li><a href="#testimonials">Client Voices</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a href="#estimate" class="nav-cta">Contact Us</a>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+  <ul>
+    <li><a href="about.html#about-content" onclick="closeMobileNav()">About</a></li>
+    <li><a href="about.html#team" onclick="closeMobileNav()">Team</a></li>
+    <li><a href="#services" onclick="closeMobileNav()">Services</a></li>
+    <li><a href="projects.html" onclick="closeMobileNav()">Project</a></li>
+    <li><a href="#properties" onclick="closeMobileNav()">Properties We Serve</a></li>
+    <li><a href="#about" onclick="closeMobileNav()">Our Approach</a></li>
+    <li><a href="#testimonials" onclick="closeMobileNav()">Client Voices</a></li>
+  </ul>
+  <a href="#estimate" class="mobile-cta" onclick="closeMobileNav()">Contact Us</a>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-left">
+    <div class="hero-left-top">
+      <h1 class="hero-h1">
+        One Partner,<br>
+        <em class="brass">All Handled.</em>
+      </h1>
+
+      <p class="hero-sub">
+        Bay Area based services provider that keeps your property clean, updated &amp; <br>performing: all handled by a team that treats your buildings like their own.
+      </p>
+      <div class="hero-actions-left">
+        <a href="#estimate" class="btn-primary">Get an Estimate</a>
+        <a href="#services" class="btn-ghost">See Our Services</a>
+      </div>
+    </div>
+
+    <div class="hero-left-bottom">
+      <div class="hero-trust">
+        <div class="trust-stat">
+          <div class="trust-number">200+</div>
+          <div class="trust-label">Approved Properties</div>
+        </div>
+        <div class="trust-stat">
+          <div class="trust-number">10+ years</div>
+          <div class="trust-label">Industry Experience</div>
+        </div>
+        <div class="trust-stat">
+          <div class="trust-number">2,500+</div>
+          <div class="trust-label">Projects Handled</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    
+    <img class="hero-right-wordmark" src="images/rook-logo.png" alt="" aria-hidden="true">
+
+
+
+
+  </div>
+</section>
+
+<div class="theme-divider" aria-hidden="true"></div>
+
+<!-- ── CREDENTIALS STRIP ─────────────────────────────── -->
+<div class="creds-strip">
+  <div class="creds-label">Our Credentials</div>
+  <div class="creds-list">
+    <div class="cred-item">
+      <div class="cred-badge">✓</div>
+      <div>
+        <div class="cred-name">CSLB License</div>
+        <div class="cred-num">#1156184 · General Building B</div>
+      </div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-badge">✓</div>
+      <div>
+        <div class="cred-name">Janitorial Registration</div>
+        <div class="cred-num">JS-LR-1001303688</div>
+      </div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-badge">✓</div>
+      <div>
+        <div class="cred-name">General Liability</div>
+        <div class="cred-num">Upto $5M Fully Bonded Coverage</div>
+      </div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-badge">✓</div>
+      <div>
+        <div class="cred-name">Workers' Compensation</div>
+        <div class="cred-num">All Field Staff Covered</div>
+      </div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-badge">✓</div>
+      <div>
+        <div class="cred-name">Approved Vendor</div>
+        <div class="cred-num">On all major platforms</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="theme-divider" aria-hidden="true"></div>
+
+<!-- ============================================================
+     SERVICES / PILLARS
+     ============================================================ -->
+<section id="services" class="tr-wrap">
+  <div class="tr-row tr-row--screen reveal">
+    <div class="tr-title">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Three Promises.<br>One Accountable Partner.</h2>
+    </div>
+    <div class="tr-content">
+      <div class="pillars">
+
+        <!-- CLEAN -->
+        <div class="pillar clean">
+          <div class="pillar-bg-num" aria-hidden="true">01</div>
+          <div class="pillar-icon-wrap">
+            <img src="images/icon-clean.png" alt="" aria-hidden="true" class="pillar-brand-icon">
+          </div>
+          <h3 class="pillar-name">Clean</h3>
+          <p class="pillar-tagline">Keeps properties looking their best</p>
+          <p class="pillar-desc">Consistent, professional cleaning that preserves appearance, health, &amp; tenant satisfaction across every part of your building.</p>
+          <a href="projects.html#clean" class="pillar-see-details">See Details →</a>
+        </div>
+
+        <!-- RENEW -->
+        <div class="pillar renew">
+          <div class="pillar-bg-num" aria-hidden="true">02</div>
+          <div class="pillar-icon-wrap">
+            <img src="images/icon-renew.png" alt="" aria-hidden="true" class="pillar-brand-icon">
+          </div>
+          <h3 class="pillar-name">Renew</h3>
+          <p class="pillar-tagline">Restores value with every turn</p>
+          <p class="pillar-desc">Turn-ready services that return units and spaces to prime condition: protecting asset value &amp; reducing vacancy cycles.</p>
+          <a href="projects.html#renew" class="pillar-see-details">See Details →</a>
+        </div>
+
+        <!-- BUILD -->
+        <div class="pillar build">
+          <div class="pillar-bg-num" aria-hidden="true">03</div>
+          <div class="pillar-icon-wrap">
+            <img src="images/icon-build.png" alt="" aria-hidden="true" class="pillar-brand-icon">
+          </div>
+          <h3 class="pillar-name">Build</h3>
+          <p class="pillar-tagline">Improves and protects for the long run</p>
+          <p class="pillar-desc">Preventive maintenance, repairs, and small construction work that keeps your buildings operating at peak performance year over year.</p>
+          <a href="projects.html#build" class="pillar-see-details">See Details →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="theme-divider" aria-hidden="true"></div>
+
+<!-- ============================================================
+     HOW WE WORK
+     ============================================================ -->
+<section class="tr-wrap" id="about">
+  <div class="tr-row tr-row--screen reveal">
+    <div class="tr-title">
+      <div class="section-label">Our Approach</div>
+      <h2 class="section-title">Simple Process.<br>Zero Surprises.</h2>
+    </div>
+    <div class="tr-content">
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">STEP 01</div>
+          <div class="step-title">Site Walk</div>
+          <p class="step-desc">We visit your property and scope work to what it actually needs.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">STEP 02</div>
+          <div class="step-title">Custom Proposal</div>
+          <p class="step-desc">A clear, itemized quote within 48 hours — no hidden fees.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">STEP 03</div>
+          <div class="step-title">Onboarding</div>
+          <p class="step-desc">Schedules, access, and communication set up before day one.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">STEP 04</div>
+          <div class="step-title">Ongoing Service</div>
+          <p class="step-desc">Regular check-ins and digital work logs keep you informed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="theme-divider" aria-hidden="true"></div>
+
+<!-- ============================================================
+     PROPERTIES SERVED + CLIENT VOICES
+     ============================================================ -->
+<section id="properties" class="tr-wrap">
+  <div class="tr-row tr-row--screen reveal">
+    <div class="tr-title">
+      <div class="section-label">Properties We Serve</div>
+      <h2 class="section-title">Built for<br>Multifamily.</h2>
+    </div>
+    <div class="tr-content">
+      <p class="properties-desc">
+        Rook specializes in multifamily residential, and the commercial spaces that support them. We know the demands of property and maintenance managers and deliver services that protect asset value and keep residents happy.
+      </p>
+
+      <div class="prop-grid prop-grid--horizontal">
+        <div class="prop-type prop-type--clickable" onclick="openCredentials()" role="button" tabindex="0" aria-label="View our multifamily credentials">
+          <svg class="prop-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <rect x="4" y="10" width="24" height="20" rx="1"/>
+            <path d="M10 30V20h12v10"/>
+            <path d="M2 10l14-8 14 8"/>
+          </svg>
+          <div class="prop-name">Multifamily</div>
+          <p class="prop-desc">Apartment communities, mixed-use residential, and condominium complexes. Click to see approved properties.</p>
+          <div class="prop-see-more">View Credentials ↗</div>
+        </div>
+        <div class="prop-type">
+          <svg class="prop-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <rect x="2" y="6" width="28" height="24"/>
+            <rect x="6" y="12" width="6" height="6"/><rect x="14" y="12" width="6" height="6"/><rect x="22" y="12" width="2" height="6"/>
+            <path d="M8 30V22h16v8"/>
+          </svg>
+          <div class="prop-name">Commercial</div>
+          <p class="prop-desc">Retail, amenity, leasing, and commercial spaces within or adjacent to multifamily properties.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="theme-divider" aria-hidden="true"></div>
+
+  <div class="tr-row tr-row--screen reveal" id="testimonials">
+    <div class="tr-title">
+      <div class="section-label">Client Voices</div>
+      <h2 class="section-title">Property Managers<br>Trust Rook.</h2>
+    </div>
+    <div class="tr-content">
+      <div class="testimonial-rotator">
+        <div class="testimonial-slide active">
+          <p class="testimonial-quote">Rook has been managing our 220-unit community for three years. Turn times dropped by nearly two weeks, and our maintenance tickets are resolved faster than any vendor we've used. They genuinely show up like they own the place.</p>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Marcus T.</div>
+            <div class="testimonial-role">Portfolio Manager · 3 Communities, Bay Area</div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <p class="testimonial-quote">What sold me was the site walk. Most vendors send a form and a quote. Rook walked every floor with me and came back with a proposal that actually reflected what I'd described. That level of attention has continued through the whole relationship.</p>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Sandra R.</div>
+            <div class="testimonial-role">Asset Manager · Class A Office, San Jose</div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <p class="testimonial-quote">We've had Rook handle everything from daily janitorial to a full parking structure repaint. One call, one team, no coordination headaches. For our HOA board, that simplicity is worth as much as the quality of the work itself.</p>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Derek K.</div>
+            <div class="testimonial-role">HOA Board President · 180-Unit Community</div>
+          </div>
+        </div>
+
+        <div class="testimonial-dots">
+          <button class="t-dot active" data-i="0" aria-label="Show testimonial 1"></button>
+          <button class="t-dot" data-i="1" aria-label="Show testimonial 2"></button>
+          <button class="t-dot" data-i="2" aria-label="Show testimonial 3"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS MODAL -->
+<div id="credentials-modal" class="modal-overlay" onclick="closeCredentials(event)" role="dialog" aria-modal="true" aria-label="Approved Properties">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeCredentials()" aria-label="Close">✕</button>
+    <div class="modal-label">Approved &amp; Credentialed On</div>
+    <h3 class="modal-title">Properties We're Trusted On</h3>
+    <p class="modal-sub">Rook is approved and actively working with leading multifamily operators across the Bay Area.</p>
+    <div class="modal-logos">
+      <div class="modal-company">Brookfield Properties</div>
+      <div class="modal-company">Milcreek Residential</div>
+      <div class="modal-company">Align Residential</div>
+      <div class="modal-company">Cushman &amp; Wakefield</div>
+      <div class="modal-company">Greystar</div>
+      <div class="modal-company">Willow Bridge</div>
+    </div>
+    <a href="#estimate" class="modal-cta" onclick="closeCredentials()">Get an Estimate →</a>
+  </div>
+</div>
+
+<div class="theme-divider" aria-hidden="true"></div>
+
+<!-- ============================================================
+     WHY ROOK + GET AN ESTIMATE
+     ============================================================ -->
+<section id="quote" class="tr-wrap">
+  <div class="tr-row tr-row--screen reveal">
+    <div class="tr-title">
+      <div class="section-label">Why Rook</div>
+      <h2 class="section-title">We Do What We Say.<br>Every Time.</h2>
+    </div>
+    <div class="tr-content">
+      <div class="values-list">
+        <div class="value-row">
+          <svg class="value-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M19 4 L22 14 L33 14 L24 21 L27 32 L19 26 L11 32 L14 21 L5 14 L16 14 Z" stroke="#006E3C" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="value-name">Professional</div>
+            <p class="value-desc">We show up prepared and deliver quality work every time.</p>
+          </div>
+        </div>
+        <div class="value-row">
+          <svg class="value-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M19 6 L29 12 L29 26 L19 32 L9 26 L9 12 Z" stroke="#006E3C" stroke-linejoin="round"/>
+            <path d="M14 19 L17 22 L24 15" stroke="#006E3C" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="value-name">Reliable</div>
+            <p class="value-desc">Count on us — no missed visits, no excuses, no no-shows.</p>
+          </div>
+        </div>
+        <div class="value-row">
+          <svg class="value-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="19" cy="19" r="13"/>
+            <path d="M19 10 v9 l6 4"/>
+          </svg>
+          <div>
+            <div class="value-name">Proactive</div>
+            <p class="value-desc">We solve problems before they escalate, without being asked.</p>
+          </div>
+        </div>
+        <div class="value-row">
+          <svg class="value-icon" viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M8 26 C8 20 12 16 19 16 C26 16 30 20 30 26"/>
+            <circle cx="19" cy="12" r="4"/>
+            <path d="M6 32 h26"/>
+          </svg>
+          <div>
+            <div class="value-name">Easy to Work With</div>
+            <p class="value-desc">Clear communication and a simple process — nothing complicated.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="theme-divider" aria-hidden="true"></div>
+
+  <div class="tr-row reveal" id="estimate">
+    <div class="tr-title">
+      <div class="section-label">Get an Estimate</div>
+      <h2 class="section-title">Ready to Put Rook<br>to Work?</h2>
+    </div>
+    <div class="tr-content">
+      <p class="quote-sub">
+        Tell us about your property and what you're looking for. We'll get back to you within 24 hours to schedule a no-pressure site visit and custom proposal.
+      </p>
+
+      <div class="estimate-grid">
+        <div class="contact-info">
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M3 5h14l-7 8-7-8z"/><path d="M3 5v10h14V5"/>
+              </svg>
+            </div>
+            <span>hello@callrook.com</span>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <path d="M4 3h4l2 5-2.5 1.5A11 11 0 0012.5 13L14 10.5l5 2v4c0 1-1 2-2 2C5 18 2 5 3 4l1-1z"/>
+              </svg>
+            </div>
+            <span>408.555.0123</span>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="10" cy="8" r="3"/><path d="M10 1C6 1 3 4 3 8c0 5 7 11 7 11s7-6 7-11c0-4-3-7-7-7z"/>
+              </svg>
+            </div>
+            <span>Bay Area & Greater California</span>
+          </div>
+        </div>
+
+        <div class="quote-form quote-form--compact">
+          <div class="form-title">Request a Free Site Quote</div>
+          <form class="form-grid form-grid--compact" onsubmit="handleSubmit(event)">
+            <div class="form-field full">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Jane Smith" autocomplete="name">
+            </div>
+            <div class="form-field full">
+              <label for="phone">Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(408) 555-0100" autocomplete="tel">
+            </div>
+            <div class="form-field full">
+              <label for="message">Anything Else We Should Know?</label>
+              <textarea id="message" name="message" placeholder="Property size, urgency, current pain points…"></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send My Quote Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="theme-divider" aria-hidden="true"></div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-brand-row">
+        <img class="footer-logo-full" src="images/footer-logo-full.png" alt="ROOK — Clean, Renew, Build">
+        <p class="footer-desc">Facility services that keep your properties clean, updated, and performing.<br>One partner. All handled.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">© 2026 Rook Facility Services. All rights reserved.</div>
+      <div class="footer-badge">callrook.com</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+  <script src="js/main.js"></script>
+</body>
+</html>
