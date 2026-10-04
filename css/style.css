@@ -415,13 +415,13 @@ nav {
   transform: translateX(-50%);
   z-index: 0;
   pointer-events: none;
-  opacity: 0.22;
-  filter: drop-shadow(14px 18px 3px rgba(51,3,90,0.15));
+  opacity: 0.34;
+  filter: drop-shadow(6px 8px 0 rgba(51,3,90,0.3)) drop-shadow(24px 32px 22px rgba(51,3,90,0.25));
 }
 .hero-right-wordmark-shadow {
-  transform: translate(calc(-50% + 26px), 34px);
-  filter: brightness(0) blur(14px);
-  opacity: 0.3;
+  transform: translate(calc(-50% + 40px), 52px);
+  filter: brightness(0) blur(22px);
+  opacity: 0.45;
   z-index: -1;
 }
 
@@ -1059,9 +1059,9 @@ footer {
   scroll-margin-top: 24px;
 }
 .footer-license p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
-  color: rgba(255,255,255,0.4);
+  color: var(--emerald-lit);
 }
 
 .footer-badge {
