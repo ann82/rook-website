@@ -1327,6 +1327,8 @@ footer {
   padding: 48px 40px;
   max-width: 520px;
   width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
   position: relative;
   box-shadow: 0 24px 80px rgba(0,0,0,0.4);
 }
@@ -1363,11 +1365,20 @@ footer {
   line-height: 1.6;
   margin-bottom: 28px;
 }
+.modal-section-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: 10px;
+}
 .modal-logos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .modal-company {
   background: var(--bg-alt);
@@ -1379,6 +1390,14 @@ footer {
   letter-spacing: 0.04em;
   color: var(--text-1);
   border-radius: 0 6px 6px 0;
+}
+.modal-company--platform { border-left-color: var(--purple-mid); }
+.modal-disclaimer {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 28px;
 }
 .modal-cta {
   display: inline-block;

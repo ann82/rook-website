@@ -22,6 +22,24 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 1100) closeMobileNav();
 });
 
+// Credentials modal
+function openCredentials() {
+  const modal = document.getElementById('credentials-modal');
+  if (!modal) return;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCredentials(event) {
+  if (event && event.target.closest('.modal-box') && !event.target.classList.contains('modal-close')) return;
+  const modal = document.getElementById('credentials-modal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeCredentials();
+});
+
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
