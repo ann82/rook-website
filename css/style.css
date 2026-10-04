@@ -274,7 +274,7 @@ nav {
 
 .hero-trust {
   display: flex;
-  gap: 48px;
+  gap: 30px;
 }
 .trust-stat { text-align: center; }
 .trust-number {
@@ -477,7 +477,7 @@ nav {
 }
 
 .pillar {
-  padding: 28px 14px 28px;
+  padding: 28px 10px 28px;
   border: 1.5px solid var(--purple-mid);
   position: relative;
   overflow: hidden;
@@ -541,8 +541,8 @@ nav {
 .pillar-tagline {
   font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
-  font-size: 11.5px;
-  letter-spacing: 0.03em;
+  font-size: 10.5px;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
   margin-bottom: 10px;
   white-space: normal;
@@ -601,7 +601,7 @@ nav {
 
 .tr-row {
   display: grid;
-  grid-template-columns: 440px 1fr;
+  grid-template-columns: 360px 1fr;
   gap: 0;
   background: #F2EFE9;
   scroll-margin-top: 24px;
@@ -639,7 +639,7 @@ nav {
 
 .tr-content {
   background: #F2EFE9;
-  padding: 40px 80px;
+  padding: 40px 56px;
 }
 
 .properties-desc {
