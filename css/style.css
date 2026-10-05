@@ -604,6 +604,15 @@ nav {
   justify-content: center;
 }
 
+/* Estimate section's right column is much taller than usual (contact
+   grid + full calendar), which would otherwise center the left title
+   far down the row, leaving a huge empty gap above it. Keep it pinned
+   near the top instead. */
+#estimate.tr-row .tr-title {
+  justify-content: flex-start;
+  padding-top: 56px;
+}
+
 .tr-row--screen {
   min-height: calc(100vh - 66px);
 }
