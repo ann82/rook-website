@@ -415,13 +415,13 @@ nav {
   transform: translateX(-50%);
   z-index: 0;
   pointer-events: none;
-  opacity: 0.22;
-  filter: drop-shadow(6px 8px 0 rgba(51,3,90,0.3)) drop-shadow(24px 32px 22px rgba(51,3,90,0.25));
+  opacity: 0.09;
+  filter: drop-shadow(6px 8px 0 rgba(51,3,90,0.18)) drop-shadow(24px 32px 22px rgba(51,3,90,0.15));
 }
 .hero-right-wordmark-shadow {
   transform: translate(calc(-50% + 40px), 52px);
   filter: brightness(0) blur(22px);
-  opacity: 0.35;
+  opacity: 0.18;
   z-index: -1;
 }
 
