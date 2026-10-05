@@ -1055,17 +1055,21 @@ footer {
 }
 
 .footer-license {
-  margin-top: 20px;
-  padding-top: 14px;
+  margin-top: 6px;
   scroll-margin-top: 24px;
 }
 .footer-license p {
   font-size: 11px;
-  line-height: 1.5;
+  line-height: 1.6;
+  max-width: 640px;
   color: var(--emerald-lit);
-  white-space: nowrap;
 }
 .footer-license-white { color: #fff; }
+.footer-license-divider {
+  color: var(--brass);
+  font-weight: 800;
+  margin: 0 8px;
+}
 
 .footer-badge {
   font-family: 'Rajdhani', sans-serif;
@@ -1552,7 +1556,7 @@ footer {
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-2);
-  max-width: 640px;
+  max-width: 1100px;
   margin-bottom: 40px;
 }
 
