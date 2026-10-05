@@ -1577,6 +1577,33 @@ footer {
   opacity: 0.5;
 }
 
+.service-list {
+  list-style: none;
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.service-list li {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  color: var(--emerald);
+  line-height: 2.1;
+}
+.service-list li em {
+  display: block;
+  margin-top: 14px;
+  font-style: italic;
+  font-weight: 700;
+}
+.service-list li.service-list-sub {
+  font-weight: 500;
+  font-size: 15px;
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
 @media (max-width: 900px) {
   .project-gallery { grid-template-columns: repeat(2, 1fr); }
 }
