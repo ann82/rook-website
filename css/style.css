@@ -1619,8 +1619,30 @@ footer {
 .team-grid--crew {
   grid-template-columns: repeat(4, 1fr);
 }
+.team-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 480px;
+}
 
 .team-card { text-align: left; }
+.team-card--horizontal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.team-card--horizontal .team-photo {
+  width: 140px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+.team-card-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--text-2);
+  font-style: italic;
+}
 
 .team-photo {
   aspect-ratio: 1 / 1;
