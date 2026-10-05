@@ -27,25 +27,6 @@
   --border:       #DDD6EC;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg:       #180E2A;
-    --bg-alt:   #231540;
-    --surface:  #2A1850;
-    --text-1:   #EDE9F6;
-    --text-2:   #A898C0;
-    --border:   #3D2A60;
-  }
-}
-:root[data-theme="dark"] {
-  --bg:       #180E2A;
-  --bg-alt:   #231540;
-  --surface:  #2A1850;
-  --text-1:   #EDE9F6;
-  --text-2:   #A898C0;
-  --border:   #3D2A60;
-}
-
 /* ============================================================
    RESET + BASE
    ============================================================ */
