@@ -397,12 +397,12 @@ nav {
   z-index: 0;
   pointer-events: none;
   opacity: 0.09;
-  filter: drop-shadow(6px 8px 0 rgba(51,3,90,0.18)) drop-shadow(24px 32px 22px rgba(51,3,90,0.15));
+  filter: drop-shadow(6px 8px 0 rgba(51,3,90,0.35)) drop-shadow(24px 32px 22px rgba(51,3,90,0.3));
 }
 .hero-right-wordmark-shadow {
   transform: translate(calc(-50% + 40px), 52px);
   filter: brightness(0) blur(22px);
-  opacity: 0.18;
+  opacity: 0.4;
   z-index: -1;
 }
 
@@ -684,14 +684,14 @@ nav {
    ============================================================ */
 .process-steps {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 .process-step {
   position: relative;
   border: 1.5px solid var(--emerald);
-  padding: 24px 28px;
+  padding: 18px 22px;
 }
 
 .step-num {
@@ -754,6 +754,7 @@ nav {
 }
 .testimonial-quote::before { content: '\201C'; }
 .testimonial-quote::after  { content: '\201D'; }
+.testimonial-quote--placeholder { color: var(--emerald); }
 
 .testimonial-meta {
   border-top: 1px solid var(--border);
@@ -850,11 +851,12 @@ nav {
   max-width: none;
 }
 
-.estimate-grid {
+.estimate-top-grid {
   margin-top: 40px;
+  margin-bottom: 32px;
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
   align-items: start;
 }
 
@@ -897,7 +899,13 @@ nav {
 }
 .calendar-embed iframe {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  margin-top: -260px;
+}
+.calendar-frame-wrap {
+  height: 965px;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 .form-title {
@@ -1039,15 +1047,16 @@ footer {
 
 .footer-license {
   margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 14px;
   scroll-margin-top: 24px;
 }
 .footer-license p {
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.5;
   color: var(--emerald-lit);
+  white-space: nowrap;
 }
+.footer-license-white { color: #fff; }
 
 .footer-badge {
   font-family: 'Rajdhani', sans-serif;
@@ -1264,8 +1273,9 @@ footer {
   .testimonial-dots { bottom: 4px; }
   .value-desc { white-space: normal; }
   .values-list { grid-template-columns: 1fr; grid-auto-flow: row; }
+  .footer-license p { white-space: normal; font-size: 12px; }
 
-  .estimate-grid { grid-template-columns: 1fr; }
+  .estimate-top-grid { grid-template-columns: 1fr; gap: 24px; }
   .quote-form { padding: 32px 20px; }
   .quote-form--compact { padding: 24px 20px; }
   .form-grid { grid-template-columns: 1fr; }
@@ -1310,9 +1320,9 @@ footer {
   background: var(--surface);
   border-radius: 12px;
   padding: 48px 40px;
-  max-width: 520px;
-  width: 90%;
-  max-height: 85vh;
+  max-width: 680px;
+  width: 92%;
+  max-height: 90vh;
   overflow-y: auto;
   position: relative;
   box-shadow: 0 24px 80px rgba(0,0,0,0.4);
@@ -1377,6 +1387,7 @@ footer {
   border-radius: 0 6px 6px 0;
 }
 .modal-company--platform { border-left-color: var(--purple-mid); }
+.modal-logos--platforms { grid-template-columns: repeat(3, 1fr); }
 .modal-disclaimer {
   font-size: 12px;
   font-style: italic;
